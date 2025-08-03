@@ -1,0 +1,183 @@
+:root {
+  --radius: 8px;
+  --bg-dark: rgba(0,0,0,0.65);
+  --form-bg: rgba(23,23,23,0.8);
+  --transition: .25s ease;
+  --shadow: 0 30px 60px -10px rgba(0,0,0,.5);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Poppins', system-ui,-apple-system,BlinkMacSystemFont,sans-serif;
+  color: #f5f5f5;
+  min-height: 100vh;
+  background: black;
+}
+
+.bg-wrapper {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Background image: replace URL below with yours */
+.bg-wrapper {
+  background: 
+    linear-gradient(to bottom, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.85) 70%),
+    url(assets/images/SignIn_bg.jpg) center/cover no-repeat fixed;
+}
+
+/* Optional overlay for extra fade */
+.overlay {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.site-header {
+  padding: 20px 30px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  z-index: 2;
+}
+
+.logo {
+  width: 120px;
+  display: block;
+  filter: drop-shadow(0 4px 16px rgba(255,0,0,0.4));
+  cursor: pointer;
+}
+
+.form-container {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 20px;
+  z-index: 2;
+}
+
+.card {
+  background: var(--form-bg);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255,255,255,0.05);
+  padding: 2.2rem 2rem 1.8rem;
+  border-radius: 12px;
+  max-width: 420px;
+  width: 100%;
+  box-shadow: var(--shadow);
+  position: relative;
+}
+
+.card h1 {
+  margin: 0 0 1rem;
+  font-family: 'Martel Sans', serif;
+  font-weight: 800;
+  font-size: 2.25rem;
+  letter-spacing: 0.5px;
+}
+
+.signup-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.field label {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #ccc;
+}
+
+.field input {
+  padding: 14px 16px;
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 6px;
+  font-size: 1rem;
+  color: #fff;
+  outline: none;
+  transition: var(--transition);
+}
+
+.field input:focus {
+  border-color: #e50914;
+  box-shadow: 0 0 0 3px rgba(229,9,20,0.3);
+}
+
+.primary-btn {
+  margin-top: 4px;
+  padding: 14px;
+  background: #e50914;
+  border: none;
+  font-size: 1rem;
+  font-weight: 600;
+  color: white;
+  cursor: pointer;
+  border-radius: 6px;
+  width: 100%;
+  letter-spacing: 0.5px;
+  transition: filter .2s ease;
+}
+
+.primary-btn:hover {
+  filter: brightness(1.08);
+}
+
+.primary-btn:active {
+  transform: translateY(1px);
+}
+
+.switch {
+  font-size: 0.9rem;
+  margin: 0;
+  text-align: center;
+}
+
+.switch a {
+  color: #fff;
+  text-decoration: underline;
+}
+
+.switch a:hover {
+  color: #e50914;
+}
+
+.legal {
+  text-align: center;
+  font-size: 0.65rem;
+  padding: 12px 16px;
+  color: #999;
+  font-family: system-ui,-apple-system,BlinkMacSystemFont,sans-serif;
+}
+
+.legal a {
+  color: #999;
+  text-decoration: underline;
+}
+
+@media (max-width: 720px) {
+  .card {
+    padding: 1.8rem 1.5rem;
+  }
+
+  .card h1 {
+    font-size: 1.85rem;
+    text-align: center;
+  }
+}

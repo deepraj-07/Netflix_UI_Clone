@@ -1,0 +1,232 @@
+:root {
+    --bg: #000;
+    --text: #fff;
+    --red: #e50914;
+    --radius: 12px;
+    --card-width: 220px;
+    --card-height: 330px;
+    font-family: 'Poppins', sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+/* 
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  min-height: 100vh;
+} */
+
+body {
+    position: relative;
+    margin: 0;
+    background:
+        url(assets/images/Trendbg.png) center/cover fixed no-repeat,
+        var(--bg);
+    color: var(--text);
+    min-height: 100vh;
+}
+
+body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.35);
+    pointer-events: none;
+    z-index: 0;
+}
+
+
+.logo {
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.logo-img {
+    height: 48px;
+    width: auto;
+    display: block;
+    filter: drop-shadow(0 0 6px rgba(229, 9, 20, 0.8));
+    cursor: pointer;
+}
+
+
+.trend-header {
+    padding: 16px 24px;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background: rgba(0, 0, 0, .7);
+    backdrop-filter: blur(6px);
+}
+
+.trend-header .container {
+    max-width: 1100px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    font-family: 'Martel Sans', sans-serif;
+    font-size: 32px;
+    font-weight: 800;
+    color: var(--red);
+    text-decoration: none;
+    letter-spacing: 1px;
+}
+
+.trend-main {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 13px 20px 0px;
+}
+
+.section-title {
+    font-family: 'Martel Sans', sans-serif;
+    font-size: 36px;
+    margin: 0 0 24px;
+    color: var(--red);
+}
+
+.cards-wrapper {
+    display: flex;
+    gap: 24px;
+    overflow-x: auto;
+    padding-bottom: 16px;
+    scroll-behavior: smooth;
+    scrollbar-gutter: stable;
+    scroll-snap-type: x mandatory;
+    overflow-y: hidden;
+    flex-wrap: nowrap;
+}
+
+.cards-wrapper::-webkit-scrollbar {
+    height: 12px;
+}
+
+.cards-wrapper::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 6px;
+}
+
+.cards-wrapper::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 6px;
+}
+
+.card {
+    position: relative;
+    flex: 0 0 auto;
+    width: var(--card-width);
+    height: var(--card-height);
+    border-radius: var(--radius);
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform .25s ease, box-shadow .25s ease;
+    background: #111;
+    scroll-snap-align: start;
+    z-index: 1;
+}
+
+.card .image {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    display: block;
+    filter: brightness(0.95);
+    transition: filter .3s ease;
+}
+
+.card .number {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    font-size: 72px;
+    font-weight: 800;
+    color: rgba(206, 201, 201, 0.9);
+    pointer-events: none;
+    transition: opacity .3s ease;
+    text-shadow: 0 4px 16px rgba(0, 0, 0, 0.6);
+    z-index: 2;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 20px 40px rgba(216, 109, 2, 0.5), 0 0 20px rgba(230, 76, 4, 0.4);
+}
+
+.card:hover .number {
+    opacity: 0;
+}
+
+.card:hover .image {
+    filter: brightness(1);
+}
+
+/* Enjoy it section */
+.enjoy-section {
+    margin-top: 8px;
+    background: radial-gradient(circle at 50% 164%, rgba(229, 9, 20, .15) 39%, rgba(0, 0, 0, 1) 64%);
+    padding: 0px 20px;
+    border-radius: 12px;
+    position: relative;
+    overflow: hidden;
+}
+
+.enjoy-content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.enjoy-title {
+    font-family: 'Martel Sans', sans-serif;
+    font-size: 60px;
+    margin: 0;
+    position: relative;
+    display: inline-block;
+    color: var(--text);
+    animation: glow 0.7s infinite alternate;
+}
+
+.enjoy-sub {
+    margin-top: 1px;
+    font-size: 18px;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+/* glowing animation */
+@keyframes glow {
+    from {
+        text-shadow: 0 0 10px rgba(219, 18, 28, 0.6), 0 0 30px rgba(222, 12, 22, 0.4);
+    }
+
+    to {
+        text-shadow: 0 0 25px rgb(237, 221, 221), 0 0 50px rgba(233, 223, 224, 0.6);
+    }
+}
+
+/* .trend-footer {
+  margin-top: 100px;
+  padding: 24px;
+  text-align: center;
+  font-size: 14px;
+  background: #0f0f0f;
+  color: rgba(255,255,255,0.6);
+} */
+.trend-footer {
+    position: relative;
+    margin-top: 100px;
+    padding: 24px;
+    text-align: center;
+    font-size: 14px;
+    background: #0f0f0f;
+    color: rgba(255, 255, 255, 0.6);
+    box-shadow: 0 20px 60px -10px rgba(229, 9, 20, 0.5);
+}
