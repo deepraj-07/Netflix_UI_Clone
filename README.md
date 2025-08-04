@@ -19,19 +19,19 @@ The landing page includes:
 
 ## 🧠 Pages & Features  
 
-✅ **Landing Page (index.html)**  
+✅ **Landing Page**  
 - Full-screen hero banner with linear gradient overlay  
 - Language dropdown (UI only)  
 - Email subscription input with call-to-action button  
 - FAQ section with hover-expand answers  
 - Footer with important links  
 
-✅ **Trending Page (trending.html)**  
+✅ **Trending Page**  
 - Top 15 trending shows layout with numbered cards  
 - Horizontal scroll animation for cards  
 - Animated "Enjoy it" section with glowing text  
 
-✅ **Sign In / Create Account Page (signin.html)**  
+✅ **Sign In / Create Account Page**  
 - Minimalist, glass-effect form card design  
 - Input fields for email & password with validation attributes  
 - Responsive layout for all screen sizes  
