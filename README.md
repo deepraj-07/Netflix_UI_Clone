@@ -69,9 +69,10 @@ The landing page includes:
 └── README.md
 
 ---
-  
-[![Live on Netlify](https://img.shields.io/badge/Live%20Demo-Netlify-00C7B7?logo=netlify&style=flat)](https://deepflix-ui.netlify.app/)
+## 🚀 Deployed Links
+  [![Live on Vercel](https://img.shields.io/badge/Live%20Demo-Vercel-000000?logo=vercel&style=for-the-badge&logoColor=white)](https://deepflix-ui.vercel.app/)
 
+[![Live on Netlify](https://img.shields.io/badge/Live%20Demo-Netlify-00C7B7?logo=netlify&style=for-the-badge)](https://deepflix-ui.netlify.app/)
 
 
 ---
