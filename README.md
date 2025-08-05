@@ -1,4 +1,4 @@
-🎬 Netflix-Style Landing Page Clone  
+## 🎬 Netflix-Style Landing Page Clone  
 A modern, responsive **Netflix-inspired landing page** project — complete with trending shows list and a sign-in page.  
 This project was built to sharpen my **HTML & CSS skills** and practice **responsive web design** with a polished, production-like UI.
 
