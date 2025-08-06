@@ -27,14 +27,12 @@ body {
   flex-direction: column;
 }
 
-/* Background image: replace URL below with yours */
 .bg-wrapper {
   background: 
     linear-gradient(to bottom, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.85) 70%),
     url(assets/images/SignIn_bg.jpg) center/cover no-repeat fixed;
 }
 
-/* Optional overlay for extra fade */
 .overlay {
   position: absolute;
   inset: 0;
@@ -75,6 +73,12 @@ body {
   width: 100%;
   box-shadow: var(--shadow);
   position: relative;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+.card:hover {
+  box-shadow: 0 0 25px rgba(229, 9, 20, 0.7), 0 0 40px rgba(229, 9, 20, 0.4);
+  transform: translateY(-5px);
+  transform: scale(1.02);
 }
 
 .card h1 {
